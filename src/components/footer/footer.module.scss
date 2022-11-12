@@ -1,0 +1,370 @@
+footer{
+	display: block;
+	background-color: #fff0e5;
+}
+
+.footerGrid{
+	width: 100%;
+	max-width: 1440px;
+	margin: auto;
+	padding: 2rem 0;
+	padding-left: 6rem;
+	padding-right: 6rem;
+	display: grid;
+	grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.footerGridLeft, .footerGridRight{
+	grid-column-end: span 6;
+}
+
+.footerGridLeftContentWrapper{
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	row-gap: 1rem;
+}
+
+
+.footerGridBox{
+	h2{
+		font-size: 1rem;
+		font-weight: 400;
+		text-transform: uppercase;
+
+		svg{
+			height: 40px;
+		}
+	}
+
+	& > ul {
+		margin-bottom: 0;
+		padding-left: 0;
+		list-style-type: none;
+
+		li{
+			margin: 0.15rem 0;
+
+			a{
+				color: black;
+				line-height: 1.5;
+			}
+			a:hover{
+				color: #3a10e5;
+			}
+
+			& > ul{
+				margin-bottom: 0;
+				padding-left: 0;
+				list-style-type: none;
+		
+				li{
+					float: left;
+					margin-right: 5px;
+				}
+
+				a{
+					color: black;
+					background-color: transparent;
+					font-size: 1.25rem;
+					margin-right: 0.5rem;
+				}
+				a:hover{
+					color: #3a10e5;
+				}
+
+				svg{
+					width: 16px;
+					height: 16px;
+				}
+			}
+		}		
+	}
+}
+
+
+.footerGridBoxSupport{
+	order: 3;
+}
+
+.footerGridRight{
+	border-left: 1px solid black;
+	padding-left: 4rem;
+
+	h2{
+		font-size: 1rem;
+		font-weight: 400;
+		text-transform: uppercase;
+
+		svg{
+			height: 40px;
+		}
+	}
+
+	h3{
+		margin-top: 0;
+		font-weight: 700;
+		line-height: 1.1;
+		font-size: 0.875rem;
+
+	}
+}
+
+.courseCatalog{
+	display: flex;
+	flex-direction: row;
+}
+
+.languageBox{
+	display: none;
+}
+
+.subjectBox{
+	width: 50%;
+	
+	ul{
+		max-height: none;
+		list-style-type: none;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		margin-bottom: 1rem;
+		padding-left: 0;
+
+		li{
+			font-size: 1rem;
+			margin: 0.15rem 0;
+
+			a{
+				color:#10162f;
+				line-height: 1.5;
+			}
+			a:hover{
+				color: #3a10e5;
+			}
+		}
+	}
+}
+
+.languageBoxDesktop{
+	width: 50%;
+	
+	ul{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		list-style-type: none;
+		padding: 0;
+
+		li{
+			width: 50%;
+			font-size: 1rem;
+			margin: 0.15rem 0;
+			
+			a{
+				color:#10162f;
+				line-height: 1.5;
+			}
+			a:hover{
+				color: #3a10e5;
+			}
+		}
+	}
+}
+
+.footerGridBottom{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	margin-bottom: 0;
+	width: 100%;
+	height: 100%;
+	max-width: 1440px;
+}
+
+.footerBottomDevider{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 0 0.5rem;
+	border-top: 1px solid black;
+
+	ul{
+		padding: 0;
+		list-style-type: none;
+	}
+
+	ul li{
+		float: left;
+		
+		a{
+			color: #10162f;
+			line-height: 1.5;
+			font-size: 0.875rem;
+
+			&::after{
+				content: '|';
+				margin: 0 0.375rem;
+				font-size: 1rem;
+			}
+		}
+		a:hover{
+			color: #3a10e5;
+		}
+
+		&:last-child{
+			a::after{
+				visibility: hidden;
+			}
+		}
+	}
+	.copyright{
+		text-align: center;
+		button{
+			background-color: transparent;
+			border: none;
+		}
+	}
+}
+
+
+@media screen and (max-width: 480px) {
+	a{
+		font-size:  0.875rem;
+	}
+	ul li{
+		margin: 0.5rem 0;
+	}
+
+
+	.footerGridBoxSupport{
+		display: none;
+	}
+
+
+	.footerGrid{
+		padding-left: 1rem;
+    padding-right: 1rem;
+
+		.footerGridLeft{
+			grid-column-end: span 12;
+			grid-template-columns: minmax(0, 1fr);
+			display: grid;
+			grid-column-end: span 12;
+
+			.footerGridLeftContentWrapper{
+				display: grid;
+				grid-template-columns: repeat(2, minmax(0, 1fr));
+				row-gap: 1rem;
+			}
+
+			.footerGridBoxPlayStore{
+				grid-column: 1/3;
+
+				ul{
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+				}
+			}
+		}
+
+		.footerGridRight{
+			padding: 0;
+			border: none;
+			grid-column-end: span 12;
+			grid-template-columns: minmax(0, 1fr);
+			display: grid;
+			grid-column-end: span 12;
+			border-top: 1px solid black;
+			margin-top: 2rem;
+			padding-top: 15px;
+
+			.subjectBox{
+				width: 100%;
+				order: 2;
+
+				ul{
+					display: flex;
+					flex-direction: row;
+					li{
+						flex:0 0 50%;
+					}
+				}
+			}
+			.courseCatalog{
+				width: 100%;
+				display: flex;
+				-webkit-flex-direction: column;
+				-ms-flex-direction: column;
+				flex-direction: column;
+			}
+
+			.languageBoxDesktop{
+				width: 100%;
+				display: flex;
+				-webkit-flex-direction: column;
+				-ms-flex-direction: column;
+				flex-direction: column;
+
+				ul{
+					display: flex;
+					flex-direction: row;
+					li{
+						flex:0 0 50%;
+					}
+				}
+			}
+		}
+	}
+
+
+	.footerGridBottom{
+		padding-left: 1rem;
+    padding-right: 1rem;
+
+		.footerBottomDevider{
+			padding-bottom: 15px;
+			padding-top: 0;
+			display: flex;
+			flex-direction: column;
+			font-size: 0.875rem;
+
+			ul{
+				justify-content: center;
+				list-style-type: none;
+				margin-bottom: 0.5rem;
+				padding-left: 0;
+				display: flex;
+				flex-wrap: wrap;
+				-webkit-box-pack: center;
+				
+				li{
+					margin: 0;
+				}
+			}
+
+			.copyright{
+				text-align: center;
+				button{
+					background-color: transparent;
+					border: none;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.footerGridBoxPlayStore{
+		grid-row: 2/4;
+	}
+
+	.footerGridBottom{
+		padding-left: 6rem;
+		padding-right: 6rem;
+	}
+
+	.displayMobile{
+		display: "none";
+	}
+}

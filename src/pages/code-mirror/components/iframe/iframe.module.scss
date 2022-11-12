@@ -1,0 +1,30 @@
+.iframe{
+	.iframeHeader{
+		height: 60px;
+		display: flex;
+		align-items: center;
+		background-color: white;
+
+		.iframeRouteIcon{
+			background-color: #efefef;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			padding: 15px 25px;
+		}
+		.iframeAddress{
+			background-color: transparent;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			padding: 15px 25px;
+		}
+	}
+
+	iframe{
+		border: none;
+		background-color: white;
+		height: calc(100vh - 60px);
+		width: 100%;
+	}
+}

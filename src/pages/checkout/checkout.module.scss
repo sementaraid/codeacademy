@@ -1,0 +1,544 @@
+#checkoutContainer {
+	background-color: #fff0e5;
+}
+
+.checkout{
+	margin: auto;	
+	width: 100%;
+	max-width: 1440px;
+}
+
+.checkoutLogo{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	a{
+		color: black;
+	}
+}
+
+.checkoutMessage{
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 2rem;
+
+	.checkoutMessageContent{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 15px;
+		padding: 15px;
+		border: 1px solid black;
+
+		svg{
+			height: 16px;
+			width: 16px;
+		}
+
+		span span{
+			font-weight: bold;
+		}
+	}
+}
+
+.checkoutGrid{
+	grid-template-columns: repeat(12, minmax(0px, 1fr));
+	display: grid;
+	width: 100%;
+	gap: 1.5rem min(9.09091%, 1.5rem);
+
+	.checkoutFormContainer{
+		grid-column-end: span 12;
+    grid-template-columns: minmax(0px, 1fr);
+    display: grid;
+		position: relative;
+
+		> svg{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0.5rem;
+			left: -0.5rem;
+		}
+	}
+
+	.checkoutSummaryContainer{
+		grid-column-end: span 12;
+    grid-template-columns: minmax(0px, 1fr);
+    display: grid;
+    align-items: flex-start;
+		position: relative;
+		
+		> svg{
+			width: 100%;
+			height: 420px;
+			position: absolute;
+			top: 0.5rem;
+			left: -0.5rem;
+		}
+
+		p{
+			margin-top: 0;
+		}
+
+		p:nth-child(2){
+			> span:nth-child(1){
+				display: block;
+			}
+			> span:nth-child(2){
+				display: flex;
+				justify-content: space-between;
+			}
+		}
+
+		p:nth-child(3){
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.checkoutCardBody svg{
+			height: 5px;
+		}
+
+		p:nth-child(5){
+			margin-top: 15px;
+			display: flex;
+			justify-content: space-between;
+		}
+
+		p:nth-child(6){
+			display: flex;
+			justify-content: space-between;
+		}
+
+		small{
+			margin-bottom: 15px;
+			color: #616161;
+			font-size: 10px;
+		}
+
+		button{
+			padding: 15px 25px;
+			border: none;
+			border-radius: 4px;
+			background-color: #3a10e5;
+			color: white;
+			font-size: 18px;
+			font-weight: 700;
+		}
+	}
+
+
+	.checkoutCard{
+		background-color: white;
+		z-index: 2;
+
+		.checkoutCardHeader{
+			background-color: #f5fcff;
+			padding: 15px;
+
+			h4{
+				margin: 0;
+			}
+		}
+
+		.checkoutCardBody{
+			padding: 15px;
+			display: flex;
+			flex-direction: column;
+
+			.checkoutSwitchContainer{
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin-bottom: 25px;
+
+				.checkoutSwitch{
+					display: flex;
+					align-items: center;
+					flex: 0 0 50%;
+
+					>div{
+						background-color: #3a10e5!important;
+						border:2px solid #3a10e5!important;
+						height: 30px!important;
+						width: 55px!important;
+
+						>div{
+							width: 25px !important;
+							height: 25px !important;
+							border-radius: 50% !important;
+						}
+					}
+
+					label{
+						padding-left: 5px;
+						display: flex;
+						justify-content: space-between;
+						width: 100%;
+
+						span:nth-child(1){
+							margin: 0px 0.25rem 0px 0px;
+							font-weight: 700;
+							font-size: 1rem;
+						}
+						span:nth-child(2){
+							background-color: #f5ffe3;
+							color: #008a27;
+							font-weight: bold;
+							padding-left: 0.5rem;
+							padding-right: 0.5rem;
+							font-size: 12px;
+						}
+					}
+				}
+
+				.checkoutSwitchCompare{
+					a{
+						background-color: transparent;
+						border: none;
+						padding: 15px 25px;
+						font-weight: 600;
+						font-size: 14px;
+						border-radius: 4px;
+						transition: opacity 150ms linear 0s;
+						color: #3a10e5;
+
+						&:hover{
+							background-color: #efefef;
+						}
+					}
+				}
+			}
+
+
+			.checkoutPlanning{
+				display: grid;
+				gap: 20px;
+				grid-template-columns: 1fr 1fr;
+
+				.planningBox{
+					display: flex;
+					transition: box-shadow 200ms ease 0s, transform 200ms ease 0s;
+
+					&:hover{
+						transform: translate(4px, -4px);
+						box-shadow: currentcolor -8px 8px 0px;
+					}
+
+					input {
+						display: none;
+					}
+
+					input + .planningCard{
+						display: flex;
+						flex-direction: column;
+						border: 2px solid black;
+						width: 100%;
+
+						.planningCardHeader{
+							padding: 15px;
+							border-bottom: 2px solid black;
+
+							.plannTitle{
+								display: flex;
+								justify-content: space-between;
+
+								label{
+									font-weight: 800;
+									font-size: 18px;
+									display: flex;
+									align-items: center;
+
+									span{
+										width: 30px;
+										height: 30px;
+										background-color: white;
+										border: 1px solid black;
+										border-radius: 50%;
+										display: block;
+										padding: 4px;
+										margin-right: 10px;
+
+										span{
+											width: 20px;
+											height: 20px;
+											border-radius: 50%;
+											background-color: white;
+											border: none;
+											display: block;
+										}
+									}
+								}
+
+								> span{
+									border: 1px solid black;
+									border-radius: 15px;
+									padding: 2px 15px;
+									font-size: 13px;
+									display: flex;
+									align-items: center;
+								}
+							}
+						}
+
+						.planningCardBody{
+							display: flex;
+							padding: 1.5rem;
+							position: relative;
+							-webkit-box-pack: center;
+							justify-content: center;
+							-webkit-box-align: center;
+							align-items: center;
+							flex-direction: column;
+
+							> svg{
+								top: 0;
+								left: 0;
+								color: white;
+								position: absolute;
+								width: 100%;
+								height: 100%;
+							}
+
+							.planningPrice{
+								position: relative;
+
+								.planningPriceBackground{
+									z-index: -1;
+									position: absolute;
+									top: -5px;
+									left: -5px;
+									bottom: 5px;
+									right: 5px;
+									overflow: hidden;
+									color: white;
+
+								}
+
+								.planningPriceBox{
+									background-color: white;
+									padding-left: 3rem;
+									padding-right: 3rem;
+									padding-bottom: 15px;
+
+									.planningAmount{
+										display: flex;
+										flex-direction: column;
+										margin-bottom: 0px;
+										line-height: 1.1;
+										-webkit-box-align: center;
+										align-items: center;
+										
+										>span:nth-child(1){
+											display: none;
+										}
+
+										> div{
+											display: flex;
+											flex-direction: row;
+											height: unset;
+											-webkit-box-align: center;
+											align-items: center;
+
+											> div{
+												display: flex;
+												margin-right: 0.25rem;
+												-webkit-box-align: start;
+												align-items: start;
+
+												> div{
+													display: flex;
+													flex-direction: column;
+													margin-left: 0.25rem;
+													align-items: flex-end;
+
+													span:nth-child(1){
+														margin-top: 1rem;
+													}
+
+													span:nth-child(2){
+														color: #707382;
+														font-size:14px;
+													}
+
+													span{
+														display: inline-block;
+														margin: 0.75rem 0px 0px;
+														font-weight: bold;
+														font-size: 1.375rem;
+													}
+												}
+											}
+
+											> div > span:nth-child(1){
+												display: inline-block;
+												margin: 0.75rem 0px 0px;
+												font-weight: bold;
+												font-size: 2.125rem;
+												margin-top: 1rem;
+											}
+
+											> div > span:nth-child(2){
+												font-size: 64px;
+												line-height: 80px;
+												display: inline-block;
+												margin: 0px;
+												font-weight: bold;
+												color: black;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+
+					input:checked + .planningCard{
+						.planningCardHeader{
+							.plannTitle{
+								label{
+									span{
+										span{
+											background-color: black;
+										}
+									}
+								}
+							}
+						}
+					}
+
+					#planning1:checked ~ .planningCard{
+						.planningCardHeader{
+							background-color: #fffae5;
+						}
+
+						.planningCardBody{
+							svg {
+								color: rgb(234, 196, 9);
+							}
+						}
+					}
+
+					#planning2:checked ~ .planningCard{
+						.planningCardHeader{
+							background-color: #fffae5;
+						}
+
+						.planningCardBody{
+							svg {
+								color: rgb(234, 196, 9);
+							}
+						}
+					}
+				}
+			}
+
+			.planningCasesBox{
+				display: flex;
+				padding: 15px;
+				align-items: center;
+
+				ul{
+					list-style: none;
+					padding: 0;
+
+					li{
+						display: flex;
+						align-items: center;
+						margin-bottom: 3px;
+					}
+
+					li svg{
+						width: 15px;
+						height: 15px;
+						color: green;
+					}
+
+					li span:nth-child(2){
+						display: none;
+					}
+
+					li span:nth-child(3){
+						margin-left: 10px;
+						font-size: 16px;
+					}
+				}
+			}
+		}
+	}
+
+
+}
+
+.paymentWrapper{
+	display: flex;
+	flex-direction: column;
+
+	.paymentCardType{
+		display: flex;
+		gap: 40px;
+
+		.paymentCardContainer{
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	.paymentDetails{
+		display: flex;
+		gap: 15px;
+
+		.formRow{
+			margin: 20px 0;
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			width: 100%;
+
+			input{
+				width: 100%;
+				padding: 15px;
+				border-radius: 5px;
+				border: 1px solid black;
+			}
+
+			
+		}
+		.formColumn{
+			display: flex;
+			width: 50%;
+			flex-direction: column;
+			gap: 10px;
+			margin: 20px 0;
+
+			input{
+				width: 100%;
+				padding: 15px;
+				border-radius: 5px;
+				border: 1px solid black;
+			}
+		}
+	}
+}
+
+@media screen and (max-width:480px) {
+	
+}
+
+
+
+@media screen and (min-width: 1024px){
+	.checkout{
+		margin: auto;
+		padding: 6rem;
+	}
+
+	.checkoutFormContainer{
+		grid-column-end: span 8 !important;
+	}
+	.checkoutSummaryContainer{
+		grid-column-end: span 4 !important;
+	}
+}

@@ -1,0 +1,907 @@
+.home{
+	display: block;
+	background-color: #fff0e5;
+
+	.hiddenDesktop{
+		display: block;
+	}
+
+}
+
+.homeContent{
+	position: relative;
+	z-index: 1;
+}
+
+.maincontent{
+	padding-top: 2.5rem;
+	padding-bottom: 4rem;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	margin-bottom: 0;
+	width: 100%;
+	height: 100%;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	max-width: 1440px;
+}
+
+.maincontent h1{
+	display: none;
+}
+
+.homeWrapper{
+	grid-template-columns: repeat(12, minmax(0, 1fr));
+	display: grid;
+	width: 100%;
+	padding-top: 0.5rem;
+	row-gap: 2rem;
+	grid-column-gap: 1rem;
+	-webkit-column-gap: min(calc(100% / 11), 1rem);
+	column-gap: min(calc(100% / 11), 1rem);
+}
+
+.homeLeft{
+	grid-column-end: span 12;
+	grid-template-columns: minmax(0, 1fr);
+	display: grid;
+	grid-auto-rows: min-content;
+	grid-column-end: span 12;
+
+	h2{
+		color: black;
+	}
+
+	p{
+		color: black;
+	}
+
+	a{
+		text-decoration: none;
+	}
+
+	.homeLeftContent{
+		display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 1rem;
+	}
+
+	.captionBox{
+    padding: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transition: box-shadow 200ms ease,-webkit-transform 200ms ease;
+    transition: box-shadow 200ms ease,transform 200ms ease;
+    position: relative;
+		border: 1px solid black;
+		background-color: white;
+
+		&:hover{
+			-webkit-transform: translate(4px, -4px);
+			-moz-transform: translate(4px, -4px);
+			-ms-transform: translate(4px, -4px);
+			transform: translate(4px, -4px);
+			box-shadow: -8px 8px 0 black;
+		}
+	}
+
+	.captionBoxTitle{
+		display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+
+		span{
+			color: black;
+			font-family: Suisse, Apercu, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
+		}
+	}
+
+	.recomendations{
+		display: flex;
+		gap: 15px;
+		flex-direction: row;
+	}
+
+	.captionBoxTitleLabel{
+		margin-right: 0.5rem;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+	}
+
+	.captionBoxContent{
+		display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+	}
+
+
+	.captionText{
+		font-weight: 700;
+    line-height: 1.1;
+    font-size: 2.75rem;
+    margin: 0;
+    font-size: 1.25rem;
+	}
+
+	.captionDescription{
+		font-weight: 400;
+    line-height: 1.5;
+    font-size: 1rem;
+    margin: 0;
+    font-size: 0.875rem;
+    margin: 0;
+	}
+
+	.captionSubject{
+		margin-top: 0.3125rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-content: space-between;
+    -ms-flex-line-pack: space-between;
+    align-content: space-between;
+	}
+
+	.recomendationSubject{
+		display: flex;
+		flex-direction: column;
+
+		h3{
+			margin: 0;
+			color: black;
+		}
+	}
+
+	.gridBoxes{
+		display: grid;
+    row-gap: 1rem;
+	}
+
+	.flexBoxes{
+		display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+	}
+
+	.myCoursesBox{
+		position: relative;
+
+		> svg{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			right: -1rem;
+			height: calc(100% + 8rem);
+			width: calc(100% + 2rem);
+		}
+
+		.myCoursesCaptions{
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+			padding-left: 1rem;
+			padding-right: 1rem;
+			padding-top: 2rem;
+			padding-bottom: 2rem;
+			margin-bottom: 8.125rem;
+			margin-right: 2rem;
+			margin-left: 2rem;
+			background-color: #fff0e5;
+			position: relative;
+			top: 4rem;
+			text-align: center;
+			-webkit-flex-direction: column;
+			-ms-flex-direction: column;
+			flex-direction: column;
+			-webkit-box-pack: start;
+			-ms-flex-pack: start;
+			-webkit-justify-content: flex-start;
+			justify-content: flex-start;
+			-webkit-align-items: center;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+
+			svg{
+				margin-bottom: 2rem;
+				width: 6rem;
+			}
+
+			.myCoursesCaptionsDescriptions{
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-flex-direction: column;
+				-ms-flex-direction: column;
+				flex-direction: column;
+
+				h3{
+					font-weight: 700;
+					line-height: 1.1;
+					font-size: 1.375rem;
+					margin: 0;
+					margin-bottom: 0.5rem;
+				}
+
+				span{
+					font-size: inherit;
+					display: inline-block;
+					margin: 0;
+				}
+
+				.flexBoxes{
+					a:nth-child(2){
+						margin-left: 0.5rem;
+						background-color: transparent;
+						color: #3a10e5;
+					}
+				}
+
+				a{
+					cursor: pointer;
+					border: none;
+					background: none;
+					padding: 0;
+					font-size: inherit;
+					-webkit-text-decoration: none;
+					text-decoration: none;
+					box-shadow: none;
+					-webkit-font-smoothing: antialiased;
+					-moz-osx-font-smoothing: grayscale;
+					-webkit-transition: border-color 150ms ease-in,color 150ms ease-in,background-color 150ms ease-in,box-shadow 150ms ease-in;
+					transition: border-color 150ms ease-in,color 150ms ease-in,background-color 150ms ease-in,box-shadow 150ms ease-in;
+					border: 2px solid black;
+					border-color: transparent;
+					white-space: nowrap;
+					-webkit-box-pack: center;
+					-ms-flex-pack: center;
+					-webkit-justify-content: center;
+					justify-content: center;
+					-webkit-align-items: center;
+					-webkit-box-align: center;
+					-ms-flex-align: center;
+					align-items: center;
+					display: -webkit-inline-box;
+					display: -webkit-inline-flex;
+					display: -ms-inline-flexbox;
+					display: inline-flex;
+					position: relative;
+					border-radius: 4px;
+					font-weight: 700;
+					padding-left: 1rem;
+					padding-right: 1rem;
+					padding-top: 0.25rem;
+					padding-bottom: 0.25rem;
+					font-size: 1rem;
+					min-width: 40px;
+					height: 40px;
+					color: #ffffff;
+					background-color: #3a10e5;
+					margin-top: 1.5rem;
+
+					&:hover{
+						background-color: #5533ff;
+					}
+
+					svg{
+						width: 12px;
+						height: 12px;
+						margin: 0;
+					}
+
+					span{
+						font-size: inherit;
+						display: inline-block;
+						margin: 0px 0px 0px 0.5rem;
+					}
+				}
+			}
+		}
+	}
+
+	.myWorkspacesBox{
+		position: relative;
+
+		> svg{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			right: -1rem;
+			height: calc(100% + 8rem);
+			width: calc(100% + 2rem);
+		}
+
+		.myWorkspacesCaptions{
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+			padding-left: 1rem;
+			padding-right: 1rem;
+			padding-top: 2rem;
+			padding-bottom: 2rem;
+			margin-bottom: 8.125rem;
+			margin-right: 2rem;
+			margin-left: 2rem;
+			background-color: #fff0e5;
+			position: relative;
+			top: 4rem;
+			text-align: center;
+			-webkit-flex-direction: column;
+			-ms-flex-direction: column;
+			flex-direction: column;
+			-webkit-box-pack: start;
+			-ms-flex-pack: start;
+			-webkit-justify-content: flex-start;
+			justify-content: flex-start;
+			-webkit-align-items: center;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+
+			svg{
+				margin-bottom: 2rem;
+				width: 6rem;
+			}
+
+			.myWorkspacesCaptionsDescriptions{
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-flex-direction: column;
+				-ms-flex-direction: column;
+				flex-direction: column;
+				-webkit-align-items: center;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center;
+
+				h3{
+					font-weight: 700;
+					line-height: 1.1;
+					font-size: 1.375rem;
+					margin: 0;
+					margin-bottom: 0.5rem;
+				}
+
+				span{
+					font-size: inherit;
+					display: inline-block;
+					margin: 0;
+				}
+
+				.flexBoxes{
+					a:nth-child(2){
+						margin-left: 0.5rem;
+						background-color: transparent;
+						color: #3a10e5;
+					}
+				}
+
+				a{
+					cursor: pointer;
+					border: none;
+					background: none;
+					padding: 0;
+					font-size: inherit;
+					-webkit-text-decoration: none;
+					text-decoration: none;
+					box-shadow: none;
+					-webkit-font-smoothing: antialiased;
+					-moz-osx-font-smoothing: grayscale;
+					-webkit-transition: border-color 150ms ease-in,color 150ms ease-in,background-color 150ms ease-in,box-shadow 150ms ease-in;
+					transition: border-color 150ms ease-in,color 150ms ease-in,background-color 150ms ease-in,box-shadow 150ms ease-in;
+					border: 2px solid black;
+					border-color: transparent;
+					white-space: nowrap;
+					-webkit-box-pack: center;
+					-ms-flex-pack: center;
+					-webkit-justify-content: center;
+					justify-content: center;
+					-webkit-align-items: center;
+					-webkit-box-align: center;
+					-ms-flex-align: center;
+					align-items: center;
+					display: -webkit-inline-box;
+					display: -webkit-inline-flex;
+					display: -ms-inline-flexbox;
+					display: inline-flex;
+					position: relative;
+					border-radius: 4px;
+					font-weight: 700;
+					padding-left: 1rem;
+					padding-right: 1rem;
+					padding-top: 0.25rem;
+					padding-bottom: 0.25rem;
+					font-size: 1rem;
+					min-width: 40px;
+					height: 40px;
+					color: #ffffff;
+					background-color: #3a10e5;
+					margin-top: 1.5rem;
+
+					&:hover{
+						background-color: #5533ff;
+					}
+
+					svg{
+						width: 12px;
+						height: 12px;
+						margin: 0;
+					}
+
+					span{
+						font-size: inherit;
+						display: inline-block;
+						margin: 0px 0px 0px 0.5rem;
+					}
+				}
+			}
+		}
+	}
+
+}
+
+
+
+.homeRight{
+	grid-column-end: span 12;
+	grid-template-columns: minmax(0, 1fr);
+	display: grid;
+	grid-auto-rows: min-content;
+	row-gap: 1rem;
+	grid-column-end: span 12;
+
+	h2{
+		color: black;
+	}
+
+	p{
+		color: black;
+	}
+
+	a{
+		text-decoration: none;
+	}
+
+	.myGoalsBox{
+		position: relative;
+
+		> svg{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			right: -1rem;
+			height: calc(100% + 8rem);
+			width: calc(100% + 2rem);
+		}
+
+		.myGoalsCaptions{
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+			padding-left: 1rem;
+			padding-right: 1rem;
+			padding-top: 2rem;
+			padding-bottom: 2rem;
+			margin-bottom: 8.125rem;
+			margin-right: 2rem;
+			margin-left: 2rem;
+			background-color: #fff0e5;
+			position: relative;
+			top: 4rem;
+			-webkit-flex-direction: column;
+			-ms-flex-direction: column;
+			flex-direction: column;
+			-webkit-box-pack: start;
+			-ms-flex-pack: start;
+			-webkit-justify-content: flex-start;
+			justify-content: flex-start;
+
+			svg{
+				margin-bottom: 2rem;
+				width: 6rem;
+			}
+
+			.myGoalsCaptionsDescriptions{
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-flex-direction: column;
+				-ms-flex-direction: column;
+				flex-direction: column;
+
+				h3{
+					font-weight: 700;
+					line-height: 1.1;
+					font-size: 1.375rem;
+					margin: 0;
+					margin-bottom: 0.5rem;
+				}
+
+				span{
+					font-size: inherit;
+					display: inline-block;
+					margin: 0;
+				}
+
+				.flexBoxes{
+					a:nth-child(2){
+						margin-left: 0.5rem;
+						background-color: transparent;
+						color: #3a10e5;
+					}
+				}
+
+				a{
+					cursor: pointer;
+					border: none;
+					background: none;
+					padding: 0;
+					font-size: inherit;
+					-webkit-text-decoration: none;
+					text-decoration: none;
+					box-shadow: none;
+					-webkit-font-smoothing: antialiased;
+					-moz-osx-font-smoothing: grayscale;
+					-webkit-transition: border-color 150ms ease-in,color 150ms ease-in,background-color 150ms ease-in,box-shadow 150ms ease-in;
+					transition: border-color 150ms ease-in,color 150ms ease-in,background-color 150ms ease-in,box-shadow 150ms ease-in;
+					border: 2px solid black;
+					border-color: transparent;
+					white-space: nowrap;
+					-webkit-box-pack: center;
+					-ms-flex-pack: center;
+					-webkit-justify-content: center;
+					justify-content: center;
+					-webkit-align-items: center;
+					-webkit-box-align: center;
+					-ms-flex-align: center;
+					align-items: center;
+					display: -webkit-inline-box;
+					display: -webkit-inline-flex;
+					display: -ms-inline-flexbox;
+					display: inline-flex;
+					position: relative;
+					border-radius: 4px;
+					font-weight: 700;
+					padding-left: 1rem;
+					padding-right: 1rem;
+					padding-top: 0.25rem;
+					padding-bottom: 0.25rem;
+					font-size: 1rem;
+					min-width: 40px;
+					height: 40px;
+					color: #ffffff;
+					background-color: #3a10e5;
+					margin-top: 1.5rem;
+
+					&:hover{
+						background-color: #5533ff;
+					}
+
+					svg{
+						width: 12px;
+						height: 12px;
+						margin: 0;
+					}
+
+					span{
+						font-size: inherit;
+						display: inline-block;
+						margin: 0px 0px 0px 0.5rem;
+					}
+				}
+			}
+		}
+	}
+
+}
+
+
+@media screen and (max-width:480px) {
+	.homeLeft{
+
+
+		.recomendations{
+			display: flex;
+			gap: 15px;
+			flex-direction: column;
+		}
+		
+		.myCoursesBox{
+			.myCoursesCaptionsDescriptions{
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+			}
+		}
+
+		.myWorkspacesBox{
+			.myWorkspacesCaptionsDescriptions{
+				-webkit-align-items: center;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center;
+			}
+
+			.flexBoxes{
+				display: flex;
+				flex-direction: column;
+			}
+		}
+	}
+
+	.homeRight{
+		.myGoalsCaptions{
+			align-items: center;
+			text-align: center;
+		}
+	}
+}
+
+
+@media screen and (min-width:480px) {
+	.homeLeft{
+
+
+
+		.myCoursesBox{
+			> svg{
+				width: calc(100% + 4rem);
+				right: -2rem;
+			}
+
+
+			.myCoursesCaptionsDescriptions{
+				-webkit-box-align: start;
+				-ms-flex-align: start;
+			}
+
+			.myCoursesCaptions{
+				padding-left: 3rem;
+				padding-right: 3rem;
+				padding-top: 3rem;
+				padding-bottom: 3rem;
+			}
+		}
+
+		.myWorkspacesBox{
+			> svg{
+				width: calc(100% + 4rem);
+				right: -2rem;
+			}
+
+			.myWorkspacesCaptions{
+				padding-left: 3rem;
+				padding-right: 3rem;
+				padding-top: 3rem;
+				padding-bottom: 3rem;
+			}
+
+			.myWorkspacesCaptionsDescriptions{
+				-webkit-align-items: center;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center;
+			}
+
+			.flexBoxes{
+				display: flex;
+				flex-direction: column;
+			}
+		}
+	}
+}
+
+
+@media screen and (min-width:768px) {
+	.maincontent{
+		padding-left: 4rem;
+		padding-right: 4rem;
+	}
+
+	.homeLeft{
+		.myCoursesBox{
+			> svg{
+				width: calc(100% + 8rem);
+				right: -4rem;
+			}
+
+			.myCoursesCaptionsDescriptions{
+				-webkit-align-items: start;
+				-webkit-box-align: start;
+				-ms-flex-align: start;
+				align-items: start;
+			}
+
+			.myCoursesCaptions{
+				padding-left: 6rem;
+				padding-right: 6rem;
+				margin-right: 0;
+				margin-left: 0;
+				text-align: start;
+				-webkit-flex-direction: row;
+				-ms-flex-direction: row;
+				flex-direction: row;
+
+				svg{
+					display: block;
+					margin: 0 3rem 0 0;
+				}
+				
+			}
+		}
+		.myWorkspacesBox{
+			> svg{
+				width: calc(100% + 8rem);
+				right: -4rem;
+			}
+
+			.myWorkspacesCaptions{
+				padding-left: 6rem;
+				padding-right: 6rem;
+				margin-right: 0;
+				margin-left: 0;
+				text-align: start;
+				-webkit-flex-direction: row;
+				-ms-flex-direction: row;
+				flex-direction: row;
+
+
+				.myWorkspacesCaptionsDescriptions{
+					-webkit-align-items: start;
+					-webkit-box-align: start;
+					-ms-flex-align: start;
+					align-items: start;
+				}
+	
+
+				svg{
+					display: block;
+					margin: 0 3rem 0 0;
+					width: 9.375rem;
+				}
+
+				.flexBoxes{
+					display: flex;
+					flex-direction: row;
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (min-width:1024px) {
+	.homeWrapper{
+		grid-column-gap: 3rem;
+		-webkit-column-gap: min(calc(100% / 11), 3rem);
+		column-gap: min(calc(100% / 11), 3rem);
+	}
+
+	.home{
+		.hiddenDesktop{
+			display: none;
+		}
+	}
+
+	.homeLeft{
+		grid-column-end: span 8;
+
+
+		.captionSubject{
+			-webkit-flex-direction: row;
+			-ms-flex-direction: row;
+			flex-direction: row;
+			-webkit-align-content: flex-start;
+			-ms-flex-line-pack: flex-start;
+			align-content: flex-start;
+			padding: 0;
+		}
+
+		.myCoursesBox{
+			> svg{
+				width: calc(100% + 4rem);
+				right: 0;
+			}
+
+			.myCoursesCaptions{
+				padding-left: 2rem;
+				padding-right: 2rem;
+				margin-right: 4rem;
+			}
+		}
+
+		.myWorkspacesBox{
+			> svg{
+				width: calc(100% + 4rem);
+				right: 0;
+			}
+
+			.myWorkspacesCaptions{
+				padding-left: 2rem;
+				padding-right: 2rem;
+				margin-right: 4rem;
+			}
+		}
+	}
+
+	.homeRight{
+		display: grid;
+    margin-left: 1rem;
+    grid-column-end: span 4;
+		position: sticky;
+    top: 6rem;
+
+		.myGoalsCaptions{
+			align-items: flex-start;
+		}
+	}
+}
+
+
+@media screen and (min-width:1200px) {
+	.maincontent{
+		padding-left: 6rem;
+		padding-right: 6rem;
+	}
+
+	.homeLeft{
+		.myCoursesBox{
+			> svg{
+				width: calc(100% + 6rem);
+			}
+
+			.myCoursesCaptions{
+				margin-right: 6rem;
+			}
+		}
+
+		.myWorkspacesBox{
+			> svg{
+				width: calc(100% + 6rem);
+			}
+
+			.myWorkspacesCaptions{
+				margin-right: 6rem;
+			}
+		}
+	}
+}
+
